@@ -1,0 +1,185 @@
+html, body {
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* webfont */
+@font-face {
+    font-family: 'EliceDigitalBaeum-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Header */
+.centering {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.roundedHeader {
+    background-color: #800020;
+    border-bottom-left-radius: 90% 40%;
+    border-bottom-right-radius: 90% 40%;
+    height: 50%;
+    width: 100%;
+}
+#headerTitle {
+    color:  white;
+    font-size: 2em;
+    font-family: 'EliceDigitalBaeum-Bd';
+    letter-spacing: .15em;
+    padding-bottom: .9em;
+}
+header {
+    margin-bottom: 2em;
+}
+
+/* Content */
+.text-divider {
+    display: flex;
+    align-items: center;
+  }
+  .text-divider::before,
+  .text-divider::after {
+    content: '';
+    height: 1px;
+    background-color: silver;
+    flex-grow: 1;
+  }
+
+.card {
+    display: block !important;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    max-width: 350px;
+
+    padding: .25em;
+    margin: .75em;
+  }
+  .card img {
+    width: 300px;
+    height: 200px;
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .cardContainer {
+    width: 300px;
+    padding: 2px 16px;
+  }
+ .card h4 {
+    font-family: 'Cafe24Ssurround';
+    font-size: 1.25em;
+    margin-top: 1em;
+    margin-bottom: .5em;
+ }
+ .card p {
+    font-family: 'Cafe24SsurroundAir';
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+ }
+
+/* Non-Mobile Devices Container */
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+/* Listing */
+.nav {
+    padding-top: 1.25em;
+}
+.dot-nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.dot-navItem {
+    border-radius: 9999px;
+    height: 0.75rem;
+    width: 0.75rem;
+    background-color: transparent;
+    border: 1px solid #d1d5db;
+    margin: 0 0.25rem;
+}
+/* Active dot */
+.dot-navItemActive {
+    background-color: #d1d5db;
+}
+
+
+/* Footer */
+footer {
+    background-color: #800020;
+    text-align: center;
+    width: 100%;
+    height: 7em;
+
+    color: #fff;
+    padding-top: 1em;
+    font-size: 1.25em;
+    font-weight: 700;
+    font-family: 'EliceDigitalBaeum-Bd';
+    letter-spacing: .15em;
+} footer .sns-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+/* Non-Mobile Devices Article */
+@media screen and (min-width:750px) {
+    article {
+        margin: 10em;
+    }
+}
+/* Mobile Devices Only */
+@media screen and (max-width:750px) {
+    article {
+        padding-left: .5em;
+        padding-right: .5em;
+        margin-top: 5em;
+        margin-bottom: 7em;
+    }
+    .roundedHeader {
+        border-bottom-left-radius: 40% 10%;
+        border-bottom-right-radius: 40% 10%;
+    }
+}
+/* Article Style */
+    article h4 {
+        color: #800020;
+        font-size: 2.5em;
+        font-family: 'Cafe24Ssurround';
+    }
+    .articleText  {
+        font-family: 'Cafe24SsurroundAir';
+        font-size: 1.75em;
+    }
+    article img {
+        max-width: 100%;
+    }

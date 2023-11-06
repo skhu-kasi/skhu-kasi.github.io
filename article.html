@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>성공회대 노학연대 가시</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="icon" href="siteImages/favicon.png">
+	</head>
+	<body>
+		<header onclick="location.href = './'">
+			<div>
+				<div class="roundedHeader">
+					<div style="padding-top: 3em" class="centering">
+						<img height="100" src="siteImages/logo.png">
+					</div>
+					<div style="text-align:center">
+						<img width="150" src="siteImages/skhu_wordmark.png" id="headerSubtitle">
+						<h1 id="headerTitle">노학연대 가시</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+
+    <article>
+        <h4 id="articleTitle">Loading...</h4>
+        <section class="articleText">
+            <img id="articleImage" src="images/cat.png">
+            <br>
+            <p id="articleText">Loading...</p>
+        </section>
+    </article>
+		
+	<footer>
+		<u>노동자를 위한 학생모임 '가시'</u>
+		<div class="sns-container centering">
+			<a class="sns" target="_blank" href="https://www.facebook.com/profile.php?id=100063805794376">
+				<img src="siteImages/footer_fb.png" width="70">
+			</a>
+			<a class="sns" target="_blank" href="https://www.instagram.com/skhu_labor_kasi">
+				<img src="siteImages/footer_insta.png" width="75">
+			</a>
+		</div>
+	</footer>
+</body>
+</html>
+
+<script>
+function getParameterByName(name) {
+  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+  results = regex.exec(location.search);
+  return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+var articleNo = getParameterByName('n');
+
+	switch (articleNo) {
+		case '1':
+			Atitle = '작성 이전';
+			Atext = '작성 이전';
+			Aimg = 'images/peoples.png';
+			break;
+
+		case '2':
+			Atitle = '작성 이전';
+			Atext = '작성 이전';
+			Aimg = 'images/peoples.png';
+			break;
+
+		case '3':
+			Atitle = '작성 이전';
+			Atext = '작성 이전';
+			Aimg = 'images/peoples.png';
+			break;
+
+		case '4':
+			Atitle = '작성 이전';
+			Atext = '작성 이전';
+			Aimg = 'images/peoples.png';
+			break;
+
+		case '5':
+			Atitle = '작성 이전';
+			Atext = '작성 이전';
+			Aimg = 'images/peoples.png';
+			break;
+
+		case '6':
+			Atitle = '';
+			Atext = '';
+			Aimg = '';
+			break;
+	
+		default:
+			alert('요청하신 게시글을 찾을 수 없습니다.');
+			throw "NotFound"
+			break;
+	}
+
+	if(Atitle){
+		document.getElementById('articleTitle').innerHTML = Atitle;
+		document.getElementById('articleText').innerHTML = Atext;
+		document.getElementById('articleImage').src = Aimg;
+	}
+</script>
